@@ -1,11 +1,12 @@
 package com.hz.backend.service;
 
-import com.hz.backend.model.Doctor;
-import com.hz.backend.repository.DoctorRepository;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import com.hz.backend.model.Doctor;
+import com.hz.backend.repository.DoctorRepository;
 @Service
 public class DoctorServiceImpl implements DoctorService{
 
@@ -23,7 +24,7 @@ public class DoctorServiceImpl implements DoctorService{
 
     @Override
     public List<Doctor> getDoctors() {
-        return doctorRepository.findAll();
+        return (List <Doctor>) doctorRepository.findAll();
     }
 
     @Override
